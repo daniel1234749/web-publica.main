@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>📊 Visualizador CSV – Mayorista Emanuel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="encabezado-con-fondo">
+  <img src="img/logo-emanuel.png" alt="Logo Emanuel" class="logo">
+  <h3>Ventas de 30 días con stock actual (TUCUMÁN) 🧐</h3>
+
+  <div id="filterSection" style="display: none;">
+    <input type="text" id="searchInput" placeholder="🔍 Buscar por descripción de producto..." />
+    <button id="searchBtn">🔍 Buscar</button>
+    <button id="exportBtn">📤 Exportar a Excel</button>
+  </div>
+</div>
+
+
+    <div class="upload-section">
+      <label for="csvFile">📁 Subí tu archivo CSV</label>
+      <input type="file" id="csvFile" accept=".csv" />
+    </div>
+
+    <div class="table-container">
+      <table id="dataTable"></table>
+    </div>
+  </div>
+
+  <!-- Librerías -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.0/package/xlsx.full.min.js"></script>
+
+  <!-- Tu script -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+<!-- Cambio para testeo2 -->

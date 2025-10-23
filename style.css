@@ -1,0 +1,288 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  width: 250px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.upload-section {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#filterSection {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  width: 300px;
+}
+
+button {
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.table-container {
+  overflow-x: auto;
+  max-height: 500px;
+  border: 1px solid #ccc;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 6px;
+  text-align: left;
+}
+
+th {
+  background-color: #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* Encabezados */
+.header-cell {
+  background-color: #dce3f2;
+  font-weight: bold;
+}
+
+/* 🔴 Quiebre */
+.quiebre-row {
+  background-color: #ec372e;
+  color: white;
+}
+
+/* 🔵 Sobrestock */
+.sobrestock-row {
+  background-color: #0275d8;
+  color: white;
+}
+/* 🟢 Comprar */
+.comprar-cell {
+  background-color: #c7f8c7; /* verde claro */
+  font-weight: bold;
+  color: #2e7d32; /* verde oscuro */
+}
+.encabezado-con-fondo {
+ background: linear-gradient(to right, #e6f0ff, #ffffff);
+
+}
+.logo {
+  width: 180px; /* Antes era 250px */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+h3 {
+  color: rgb(31, 29, 29);
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra negra */
+}
+
+#filterSection {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.resaltar-comprar {
+  background-color: #c7f8c7 !important;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+/* === MODAL === */
+#modalSeleccionados {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-contenido {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  max-height: 80%;
+  overflow: auto;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.btn-elegir {
+  background-color: #ffd966;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.btn-elegir:disabled {
+  background-color: #a4d7a4;
+  color: white;
+  cursor: default;
+}
+
+/* === MODAL === */
+#modalSeleccionados {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.modal-fade-in {
+  animation: modalZoom 0.3s ease-in-out;
+}
+
+.modal-contenido {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 90%;
+  width: 800px;
+  max-height: 85%;
+  overflow: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+@keyframes modalZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-elegir,
+.btn-exportar,
+.btn-cerrar,
+.btn-vaciar,
+.btn-quitar,
+.btn-ver-seleccionados {
+  cursor: pointer;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-elegir {
+  background-color: #ffd966;
+}
+
+.btn-elegir:disabled {
+  background-color: #a4d7a4;
+  color: white;
+}
+
+.btn-exportar {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-cerrar {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-vaciar {
+  background-color: #ffc107;
+  color: black;
+}
+
+.btn-quitar {
+  background-color: #ff6b6b;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.btn-ver-seleccionados {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .modal-contenido {
+    width: 95%;
+    padding: 15px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  .btn-elegir,
+  .btn-exportar,
+  .btn-cerrar,
+  .btn-vaciar {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}
