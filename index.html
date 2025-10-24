@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>📊 Visualizador CSV – Mayorista Emanuel</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="tabla-style.css">
 </head>
 <body>
 
@@ -24,6 +25,15 @@
       <label for="csvFile">📁 Subí tu archivo CSV</label>
       <input type="file" id="csvFile" accept=".csv" />
     </div>
+    <div class="filtro-container" style="margin: 10px 0;">
+  <input 
+    type="text" 
+    id="filtroInput" 
+    placeholder="🔍 Filtrar por código o descripción..." 
+    style="padding: 8px; width: 100%; max-width: 350px; border-radius: 8px; border: 1px solid #ccc;"
+  >
+</div>
+
 
     <div class="table-container">
       <table id="dataTable"></table>

@@ -216,3 +216,23 @@ btnVerSeleccion.textContent = "🧾 Ver Seleccionados";
 btnVerSeleccion.classList.add("btn-ver-seleccionados");
 btnVerSeleccion.onclick = crearModal;
 document.getElementById("filterSection").appendChild(btnVerSeleccion);
+
+// --- FILTRO DE BUSQUEDA EN TABLA ---
+document.addEventListener("DOMContentLoaded", () => {
+  const input = document.getElementById("filtroInput");
+  const tabla = document.querySelector("table"); // o usa el id si tu tabla lo tiene
+  if (!input || !tabla) return;
+
+  input.addEventListener("input", () => {
+    const texto = input.value.toLowerCase();
+    const filas = tabla.querySelectorAll("tbody tr");
+
+    filas.forEach(fila => {
+      const columnas = fila.querySelectorAll("td");
+      const coincide = Array.from(columnas).some(td =>
+        td.textContent.toLowerCase().includes(texto)
+      );
+      fila.style.display = coincide ? "" : "none";
+    });
+  });
+});

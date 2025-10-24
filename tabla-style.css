@@ -1,0 +1,77 @@
+/* === Estilos tabla CSV === */
+
+.container-tabla {
+  max-width: 95%;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  overflow-x: auto;
+}
+
+/* Título y buscador */
+.header-tabla {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.header-tabla h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.input-busqueda {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.2s;
+}
+
+.input-busqueda:focus {
+  border-color: #007bff;
+}
+
+/* Tabla */
+.tabla-csv {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.tabla-csv th, .tabla-csv td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.tabla-csv th {
+  background: #007bff;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+/* Scroll */
+.scrollable {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.scrollable::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 10px;
+}
+
+.scrollable::-webkit-scrollbar-thumb:hover {
+  background: #0056b3;
+}
