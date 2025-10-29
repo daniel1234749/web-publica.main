@@ -75,3 +75,13 @@
 .scrollable::-webkit-scrollbar-thumb:hover {
   background: #0056b3;
 }
+
+th {
+  white-space: normal !important;  /* permite saltos de línea */
+  word-wrap: break-word;           /* corta palabras largas */
+  font-size: 13px;                 /* más compacto */
+  text-align: center;
+  padding: 6px 8px;
+  max-width: 100px;                /* controla el ancho máximo */
+  line-height: 1.2;                /* mejora la lectura */
+}
