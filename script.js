@@ -236,3 +236,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+// === MOSTRAR FECHA DE ÚLTIMA ACTUALIZACIÓN ===
+fetch('datos.json')
+  .then(response => response.headers.get('last-modified'))
+  .then(fecha => {
+    if (fecha) {
+      const fechaFormateada = new Date(fecha).toLocaleString('es-AR', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      });
+      document.getElementById('ultima-actualizacion').textContent =
+        `📅 Última actualización: ${fechaFormateada}`;
+    }
+  })
+  .catch(err => console.error('Error al obtener la fecha de actualización:', err));
